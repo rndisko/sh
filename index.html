@@ -1,0 +1,231 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="style.css" />     -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="main.js"></script>
+
+<style>
+body{
+    /* background: radial-gradient(#ffffff,#30A9DC); */
+    background-color: 30A9DC;
+}
+
+.head{
+    background-color: rgb(55, 56, 58);
+    text-align: center;
+    color: white;
+    font-family: 'Franklin Gothic Medium';
+    font-size: 30px;
+    margin-bottom: 50px;
+}
+
+
+.button-text{
+    background-color: rgb(63, 100, 221);
+    width: 100px;
+    height: 100px;
+    text-align: justify;
+    
+}
+    .button-text p{
+        font-size: 100%;
+        /* text-align:center; */
+        
+       
+    } 
+
+.button-img{
+width: 10%;
+height: auto;
+}
+
+.button{
+    background-color: rgba(255, 255, 255, 0.836);
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    /* cursor: pointer; */
+    border-radius: 20%;
+}
+
+
+@media (max-width: 600px) {
+    .button-img{
+    width: 20%;
+    height: auto;
+    }
+
+}
+
+
+</style>
+</head>
+<body>
+<!-- --------------------------------------------------------------------------------------------------------------- -->
+<!-- COBA -->
+
+
+<button class="button" id="send_pin_7_high"> KLIK INI</button>
+
+
+
+
+<!-- <div class="button-text">
+    <p onclick="klik()">coba klik</p>
+</div>
+<script>
+function klik(){
+    $(document).ready(function() {                    
+        $("#result_pin_7").load('pin_7.php', {"data_pin_7":'1'} );
+            $("#data_pin_7").val('');
+    });
+}
+</script>
+
+<div class="cover-button">
+<input type="image" id="send_pin_7_high" src="img/on.png" class="button-img">ON 7</button>                 
+    <input type="image" id="send_pin_7_low" src="img/OFF.png" class="button-img">OFF 7</button>
+    <p id="result_pin_7" ></p>
+</div> -->
+
+
+
+<!-- COBA END -->
+
+
+
+
+
+
+
+<h2 class="head">DEVICE CONTROL</h2>               
+           
+    
+    <input type="image" id="send_pin_7_high" src="img/on.png" class="button-img">ON 7</button>                 
+    <input type="image" id="send_pin_7_low" src="img/OFF.png" class="button-img">OFF 7</button>
+    <p id="result_pin_7" ></p>
+
+    <input type="image" id="send_pin_8_high" src="img/on.png" class="button-img">ON 8</button>                 
+    <input type="image" id="send_pin_8_low" src="img/OFF.png" class="button-img">OFF 8</button>
+    <p id="result_pin_8" ></p>
+
+    <input type="image" id="send_pin_9_high" src="img/on.png" class="button-img">ON 9</button>                 
+    <input type="image" id="send_pin_9_low" src="img/OFF.png" class="button-img">OFF 9</button>
+    <p id="result_pin_9" ></p>
+
+    <input type="image" id="send_pin_10_high" src="img/on.png" class="button-img">ON 10</button>                 
+    <input type="image" id="send_pin_10_low" src="img/OFF.png" class="button-img">OFF 10</button>
+    <p id="result_pin_10" ></p>
+
+    <input type="image" id="send_pin_13_high" src="img/on.png" class="button-img">ON 13</button>                 
+    <input type="image" id="send_pin_13_low" src="img/OFF.png" class="button-img">OFF 13</button>
+    <p id="result_pin_13" ></p>
+    
+     
+<!-- pin 7 -->
+<script>
+    $(document).ready(function() {
+        $("#send_pin_7_high").click(function(event){
+            // var pin_7 =  $("#data_pin_7").val();            
+            $("#result_pin_7").load('pin_7.php', {"data_pin_7":'1'} );
+                $("#data_pin_7").val('');                
+        });
+    });
+    $(document).ready(function() {
+        $("#send_pin_7_low").click(function(event){
+            // var pin_7 =  $("#data_pin_7").val();            
+            $("#result_pin_7").load('pin_7.php', {"data_pin_7":'0'} );
+                $("#data_pin_7").val('');                
+        });
+    });
+</script>
+
+<!-- pin 8 -->
+<script>
+    $(document).ready(function() {
+        $("#send_pin_8_high").click(function(event){
+            // var pin_8 =  $("#data_pin_8").val();            
+            $("#result_pin_8").load('pin_8.php', {"data_pin_8":'1'} );
+                $("#data_pin_8").val('');                
+        });
+    });
+    $(document).ready(function() {
+        $("#send_pin_8_low").click(function(event){
+            // var pin_8 =  $("#data_pin_8").val();            
+            $("#result_pin_8").load('pin_8.php', {"data_pin_8":'0'} );
+                $("#data_pin_8").val('');                
+        });
+    });
+</script>
+
+<!-- pin 9 -->
+<script>
+    $(document).ready(function() {
+        $("#send_pin_9_high").click(function(event){
+            // var pin_9 =  $("#data_pin_9").val();            
+            $("#result_pin_9").load('pin_9.php', {"data_pin_9":'1'} );
+                $("#data_pin_9").val('');                
+        });
+    });
+    $(document).ready(function() {
+        $("#send_pin_9_low").click(function(event){
+            // var pin_9 =  $("#data_pin_9").val();            
+            $("#result_pin_9").load('pin_9.php', {"data_pin_9":'0'} );
+                $("#data_pin_9").val('');                
+        });
+    });
+</script>
+
+<!-- pin 10 -->
+<script>
+    $(document).ready(function() {
+        $("#send_pin_10_high").click(function(event){
+            // var pin_10 =  $("#data_pin_10").val();            
+            $("#result_pin_10").load('pin_10.php', {"data_pin_10":'1'} );
+                $("#data_pin_10").val('');                
+        });
+    });
+    $(document).ready(function() {
+        $("#send_pin_10_low").click(function(event){
+            // var pin_10 =  $("#data_pin_10").val();            
+            $("#result_pin_10").load('pin_10.php', {"data_pin_10":'0'} );
+                $("#data_pin_10").val('');                
+        });
+    });
+</script>
+
+<!-- pin 13 -->
+<script>
+    $(document).ready(function() {
+        $("#send_pin_13_high").click(function(event){
+            // var pin_13 =  $("#data_pin_13").val();            
+            $("#result_pin_13").load('pin_13.php', {"data_pin_13":'1'} );
+                $("#data_pin_13").val('');                
+        });
+    });
+    $(document).ready(function() {
+        $("#send_pin_13_low").click(function(event){
+            // var pin_13 =  $("#data_pin_13").val();            
+            $("#result_pin_13").load('pin_13.php', {"data_pin_13":'0'} );
+                $("#data_pin_13").val('');                
+        });
+    });
+</script>
+    
+</body>
+</html>

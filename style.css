@@ -1,0 +1,43 @@
+body{
+    margin: 0;
+    background-color:#0e88b8;
+    
+    /*background-image: url("img/Smart-Home-Gadgets.jpg"); */
+    /* background-size: 100%; */
+
+}
+
+h1{
+    font-size: 50px;
+    text-align: center;
+    color: #0e88b8;
+}
+
+.flex-container-button{
+    display: flex;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.103);
+}
+
+    .flex-container-button > div {
+        background-color: rgba(255, 255, 255, 0.192);
+        width: 100%;
+        height: auto;
+        margin: 1%;
+        padding: 1%;
+        align-content: center;
+
+    }
+
+.button{
+    width: 10px;
+    height: auto;
+    /* background-color:#2c2c26; */
+    
+}
+
+
+
+.a{
+    color: blue;
+}

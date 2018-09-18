@@ -1,0 +1,42 @@
+<html>
+   <head>
+     <title>Contoh php jQuery</title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">    
+ 
+
+   </head>
+    
+   <body>
+
+            
+        <input id="nama" >         
+        <button type="image" id="submit">Submit</button>       
+    
+        
+        <div id="hasil" ></div>
+        
+
+
+<script>
+         $(document).ready(function() {
+            $("#submit").click(function(event){
+
+               var nama_ =  $("#nama").val();
+               
+               $("#hasil").load('test.php', {"nama":nama_} );
+
+                    $("#nama").val('');
+                    
+            });
+         });
+      </script>
+
+
+
+   </body>
+    
+</html>

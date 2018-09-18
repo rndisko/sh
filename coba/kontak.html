@@ -1,0 +1,57 @@
+<html>
+   <head>
+     <title>Contoh php jQuery</title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">    
+    
+
+   </head>
+    
+   <body>
+
+
+
+    
+    <div class="container">
+    
+        <h3>Masukkan nama dan jenis kelamin anda kemudian klik tombol submit : </h3>
+          <div class="form-group">
+            <label for="nama">Nama : </label>
+            <input id="nama" class="form-control" placeholder="* Nama lengkap">
+          </div>
+          <div class="form-group">
+            <label for="jeniskelamin">Jenis : </label>
+            <input id="jeniskelamin" class="form-control" placeholder="* Jenis kelamin">
+          </div>
+        <button type="submit" class="btn btn-default" id="submit">Submit</button>
+        
+    </div>
+        
+    <div class="container-fluid">
+        <table id="hasil" class="table table-striped">
+        </table>
+    </div>
+        
+
+    
+
+<script>
+         $(document).ready(function() {
+            $("#submit").click(function(event){
+               var nama =  $("#nama").val();
+               var jeniskelamin = $("#jeniskelamin").val();
+               $("#hasil").load('act.php', {"nama":nama, "jeniskelamin":jeniskelamin} );
+               $("#nama").val('');
+               $("#jeniskelamin").val('');
+            });
+         });
+      </script>
+
+
+
+   </body>
+    
+</html>
